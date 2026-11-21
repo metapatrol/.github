@@ -1,0 +1,45 @@
+name: Bug report
+description: Something does not work as documented.
+title: "bug: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Remove tokens, keys and other secrets from
+        anything you paste. Security problems go to private vulnerability
+        reporting, not here.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Release, image tag or commit.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: The smallest set of steps or configuration that shows it.
+  - type: textarea
+    id: output
+    attributes:
+      label: Relevant output
+      description: Logs or error messages. Formatted as code automatically.
+      render: text
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Platform, Kubernetes or Go version, anything else that may matter.
